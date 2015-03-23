@@ -1,0 +1,16 @@
+{
+	"name": "olevole/jails",
+	"version": "10.1.5",
+	"author": "olevole",
+	"summary": "Manage FreeBSD CBSD with puppet.",
+	"license": "BSD",
+	"source": "https://github.com/olevole/puppet-cbsd",
+	"project_page": "https://github.com/olevole/puppet-cbsd",
+	"issues_url": "https://github.com/olevole/puppet-cbsd/issues",
+	"dependencies": [
+	{
+		"name": "puppetlabs-stdlib",
+		"version_range": ">= 1.0.0"
+	}
+	]
+}
