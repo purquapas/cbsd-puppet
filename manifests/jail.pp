@@ -31,7 +31,9 @@ $template              = '',
 
 $jid                   = '',
 
-$astart                = '',
+$astart='',
+$ver                   = 'native',
+$arch                  = 'native',
 $jname                 = '',
 $path                  = '',
 $ip4                   = '',

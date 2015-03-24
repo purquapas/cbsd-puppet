@@ -16,7 +16,7 @@
 'jname'			=> 'string',
 'path'			=> 'string',
 'ip4'			=> 'string',
-'astart'		=> 'string',
+'astart'=>'string',
 'ver'			=> 'string',
 'arch'			=> 'string',
 'ip4_addr'		=> 'string',
@@ -27,7 +27,7 @@
 'interface'             => 'string',
 'vnet'                  => 'string',
 'vnet.interface'        => 'string',
-'host.hostname'         => 'string',
+'host_hostname'         => 'string',
 'host.domainname'       => 'string',
 'host.hostuuid'         => 'string',
 'host.hostid'           => 'string',
@@ -52,20 +52,20 @@
 'allow.quotas'          => 'string',
 'allow.socket_af'       => 'string',
 'allow.dying'           => 'string',
-'exec.prestart'         => 'string',
-'exec.start'            => 'string',
-'exec.poststart'        => 'string',
-'exec.prestop'          => 'string',
-'exec.stop'             => 'string',
-'exec.poststop'         => 'string',
-'exec.clean'            => 'string',
-'exec.jail_user'        => 'string',
-'exec.system_jail_user' => 'string',
-'exec.system_user'      => 'string',
-'exec.timeout'          => 'string',
-'exec.consolelog'       => 'string',
-'exec.fib'              => 'string',
-'stop.timeout'          => 'string',
+'exec_prestart'         => 'string',
+'exec_start'            => 'string',
+'exec_poststart'        => 'string',
+'exec_prestop'          => 'string',
+'exec_stop'             => 'string',
+'exec_poststop'         => 'string',
+'exec_clean'            => 'string',
+'exec_jail_user'        => 'string',
+'exec_system_jail_user' => 'string',
+'exec_system_user'      => 'string',
+'exec_timeout'          => 'string',
+'exec_consolelog'       => 'string',
+'exec_fib'              => 'string',
+'stop_timeout'          => 'string',
 'mount'                 => 'string',
 'mount.fstab'           => 'string',
 'mount.devfs'           => 'string',
@@ -77,12 +77,12 @@
       if value != ''
         case type
           when 'string' -%>
-    <%= var %> = '<%= scope.lookupvar("#{cleanVar}") %>';
+<%= var %>="<%= scope.lookupvar("#{cleanVar}") %>";
 <%-       when 'boolean'
             if !!value != value
               value = value.to_bool
             end -%>
-    <%= var %> = <%= value %>;
+<%= var %> = <%= value %>;
 <%-       end
       end
     } -%>
